@@ -18,12 +18,14 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 egui = "0.18.1"
-#eframe = { version = "0.18.1", features = ["glow"] }
-eframe = { path = "../egui/eframe", features = ["glow"] }
+#egui = {path = "../egui/egui"}
 
+eframe = { version = "0.18", features = ["glow"] }
+#eframe = { path = "../egui/eframe", features = ["glow"] }
 
-egui_glow = { path = "../egui/egui_glow" }
-#egui_glow = "0.18.1"
+egui_glow = "0.18.1"
+#egui_glow = { path = "../egui/egui_glow" }
+
 glow = "0.11"
 
 # native:
@@ -43,8 +45,9 @@ opt-level = 2 # fast and small wasm
 [patch.crates-io]
 
 # If you want to use the bleeding edge version of egui and eframe:
-# egui = { git = "https://github.com/emilk/egui", branch = "master" }
-# eframe = { git = "https://github.com/emilk/egui", branch = "master" }
+egui = { git = "https://github.com/emilk/egui", branch = "master" }
+eframe = { git = "https://github.com/emilk/egui", branch = "master" }
+egui_glow = {git = "https://github.com/emilk/egui", branch="master"}
 
 # If you fork https://github.com/emilk/egui you can test with:
 # egui = { path = "../egui/egui" }

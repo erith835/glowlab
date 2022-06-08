@@ -55,7 +55,7 @@ dependencies = [
  "objc",
  "objc-foundation",
  "objc_id",
- "parking_lot 0.12.0",
+ "parking_lot 0.12.1",
  "thiserror",
  "winapi",
  "x11rb",
@@ -369,9 +369,10 @@ checksum = "9ea835d29036a4087793836fa931b08837ad5e957da9e23886b29586fb9b6650"
 [[package]]
 name = "eframe"
 version = "0.18.0"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "bytemuck",
- "egui 0.18.1",
+ "egui",
  "egui-winit",
  "egui_glow",
  "glow",
@@ -388,30 +389,21 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.18.1"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "ahash",
- "epaint 0.18.1",
+ "epaint",
  "nohash-hasher",
  "tracing",
 ]
 
 [[package]]
-name = "egui"
-version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb095a8b9feb9b7ff8f00b6776dffcef059538a3f4a91238e03c900e9c9ad9a2"
-dependencies = [
- "ahash",
- "epaint 0.18.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "nohash-hasher",
-]
-
-[[package]]
 name = "egui-winit"
 version = "0.18.0"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "arboard",
- "egui 0.18.1",
+ "egui",
  "instant",
  "smithay-clipboard",
  "tracing",
@@ -422,9 +414,10 @@ dependencies = [
 [[package]]
 name = "egui_glow"
 version = "0.18.1"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "bytemuck",
- "egui 0.18.1",
+ "egui",
  "glow",
  "memoffset",
  "tracing",
@@ -435,41 +428,23 @@ dependencies = [
 [[package]]
 name = "emath"
 version = "0.18.0"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "bytemuck",
 ]
 
 [[package]]
-name = "emath"
-version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c223f58c7e38abe1770f367b969f1b3fbd4704b67666bcb65dbb1adb0980ba72"
-
-[[package]]
 name = "epaint"
 version = "0.18.1"
+source = "git+https://github.com/emilk/egui?branch=master#218d4d4eeaa7f3c8495881d5e6555b14d8ab95eb"
 dependencies = [
  "ab_glyph",
  "ahash",
  "atomic_refcell",
  "bytemuck",
- "emath 0.18.0",
+ "emath",
  "nohash-hasher",
- "parking_lot 0.12.0",
-]
-
-[[package]]
-name = "epaint"
-version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c29567088888e8ac3e8f61bbb2ddc820207ebb8d69eefde5bcefa06d65e4e89"
-dependencies = [
- "ab_glyph",
- "ahash",
- "atomic_refcell",
- "emath 0.18.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "nohash-hasher",
- "parking_lot 0.12.0",
+ "parking_lot 0.12.1",
 ]
 
 [[package]]
@@ -563,7 +538,7 @@ version = "0.1.0"
 dependencies = [
  "console_error_panic_hook",
  "eframe",
- "egui 0.18.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "egui",
  "egui_glow",
  "glow",
  "tracing-subscriber",
@@ -714,9 +689,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.125"
+version = "0.2.126"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5916d2ae698f6de9bfb891ad7a8d65c09d232dc58cc4ac433c7da3b2fd84bc2b"
+checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
 
 [[package]]
 name = "libloading"
@@ -1010,9 +985,9 @@ dependencies = [
 
 [[package]]
 name = "parking_lot"
-version = "0.12.0"
+version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "87f5ec2493a61ac0506c0f4199f99070cbe83857b0337006a30f3e6719b8ef58"
+checksum = "3742b2c103b9f06bc9fff0a37ff4912935851bee6d36f3c02bcc755bcfec228f"
 dependencies = [
  "lock_api",
  "parking_lot_core 0.9.3",
@@ -1346,9 +1321,9 @@ dependencies = [
 
 [[package]]
 name = "ttf-parser"
-version = "0.15.0"
+version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c74c96594835e10fa545e2a51e8709f30b173a092bfd6036ef2cec53376244f3"
+checksum = "42d4b50cba812f0f04f0707bb6a0eaa5fae4ae05d90fc2a377998d2f21e77a1c"
 
 [[package]]
 name = "unicode-bidi"
