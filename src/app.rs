@@ -1,6 +1,6 @@
+use eframe::egui;
 use eframe::egui::mutex::Mutex;
 use std::sync::Arc;
-use eframe::egui;
 
 pub struct TemplateApp {
     // Example stuff:
@@ -64,7 +64,6 @@ impl TemplateApp {
 }
 
 impl eframe::App for TemplateApp {
-
     /// Called each time the UI needs repainting, which may be many times per second.
     /// Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
     fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
@@ -132,8 +131,6 @@ impl eframe::App for TemplateApp {
                 self.custom_painting(ui);
             });
             ui.label("Drag to rotate!");
-
-
         });
 
         if false {
